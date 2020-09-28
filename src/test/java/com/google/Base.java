@@ -14,12 +14,12 @@ public class Base {
 
     @BeforeEach
     void before(){
-        System.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","D:\\Projects\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 

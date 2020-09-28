@@ -8,19 +8,19 @@ import org.openqa.selenium.support.How;
 
 import java.util.List;
 
-public class RequestSearch {
+public class GoogleSearchPF {
     private WebDriver driver;
 
-    @FindBy(how = How.XPATH, using = "//input[@class='gLFyf gsfi']")
+    @FindBy(how = How.XPATH, using = "//input[@title=\"Поиск\"]")
     WebElement inputField;
 
-    @FindBy(how = How.XPATH, using = "//div[@class='FPdoLc tfB0Bf']//input[@class='gNO89b']")
+    @FindBy(how = How.XPATH, using = "//*[@value=\"Поиск в Google\" and @name = \"btnK\"]")
     WebElement findButton;
 
-    @FindAll(@FindBy(how = How.XPATH, using = "//h3[@class='LC20lb DKV0Md']"))
+    @FindAll(@FindBy(how = How.XPATH, using = "//div[@class=\"r\"]//h3"))
     List<WebElement> news;
 
-    public RequestSearch(WebDriver driver) {this.driver = driver; }
+    public GoogleSearchPF(WebDriver driver) {this.driver = driver; }
 
     public void findNews(String key) {
         inputField.click();
